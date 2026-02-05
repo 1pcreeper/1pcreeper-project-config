@@ -27,12 +27,12 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
-      group-id: user-public-group
+      group-id: general-public-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: com.birby.project.user_shared_library
+        spring.json.trusted.packages: project.shared_general_starter
     listener:
       ack-mode: manual_immediate
       concurrency: 3
