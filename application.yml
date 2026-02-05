@@ -22,7 +22,7 @@ spring:
         dialect:
           storage_engine: innodb
   kafka:
-    bootstrap-servers: ${DOCKER_KAFKA_BOOTSTRAP_SERVERS}
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -45,8 +45,8 @@ logging:
 grpc:
   client:
     user-account-service:
-      address: ${GLOBAL_USER_ACCOUNT_SERVICE_HOSTNAME}
-      port: ${GLOBAL_USER_ACCOUNT_SERVICE_GRPC_PORT}
+      address: ${GENERAL_ACCOUNT_SERVICE_SERVER_HOSTNAME}
+      port: ${GENERAL_ACCOUNT_SERVICE_GRPC_PORT}
 eureka:
   instance:
     prefer-ip-address: false
@@ -54,4 +54,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${GLOBAL_USER_SERVICE_REGISTRY_HOSTNAME}:${GLOBAL_USER_SERVICE_REGISTRY_HTTP_PORT}/eureka
+      defaultZone: http://${GENERAL_SERVICE_REGISTRY_SERVER_IP_ADDRESS}:${GENERAL_SERVICE_REGISTRY_SERVER_PORT}/eureka
