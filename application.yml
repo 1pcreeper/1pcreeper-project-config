@@ -44,7 +44,7 @@ logging:
         type.descriptor.sql.BasicBinder: TRACE
 grpc:
   client:
-    user-account-service:
+    general-account-service:
       address: ${GENERAL_ACCOUNT_SERVICE_SERVER_HOSTNAME}
       port: ${GENERAL_ACCOUNT_SERVICE_GRPC_PORT}
 eureka:
