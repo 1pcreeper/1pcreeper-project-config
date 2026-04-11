@@ -60,3 +60,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://${GENERAL_SERVICE_REGISTRY_SERVER_IP_ADDRESS}:${GENERAL_SERVICE_REGISTRY_SERVER_PORT}/eureka
+properties:
+  jwt:
+    issuer-uri: ${OAUTH2_RESOURCE_JWT_ISSUER_LOCATION}
