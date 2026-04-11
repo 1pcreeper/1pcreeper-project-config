@@ -21,6 +21,11 @@ spring:
                   enabled: true
         dialect:
           storage_engine: innodb
+  security:
+    oauth2:
+        resourceserver:
+            jwt:
+                issuer-uri: ${OAUTH2_RESOURCE_JWT_ISSUER_LOCATION}
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
     producer:
