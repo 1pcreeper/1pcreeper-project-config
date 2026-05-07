@@ -23,9 +23,9 @@ spring:
           storage_engine: innodb
   security:
     oauth2:
-        resourceserver:
-            jwt:
-                issuer-uri: ${OAUTH2_RESOURCE_JWT_ISSUER_LOCATION}
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_RESOURCE_JWT_ISSUER_LOCATION}
   main:
     allow-bean-definition-overriding: true
   kafka:
@@ -61,7 +61,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${GENERAL_SERVICE_REGISTRY_SECURITY_USERNAME}:${GENERAL_SERVICE_REGISTRY_SECURITY_PASSWORD}@${GENERAL_SERVICE_REGISTRY_SERVER_IP_ADDRESS}:${GENERAL_SERVICE_REGISTRY_SERVER_PORT}/eureka
+      defaultZone: http://admin:${GENERAL_SERVICE_REGISTRY_SECURITY_PASSWORD}@${GENERAL_SERVICE_REGISTRY_SERVER_IP_ADDRESS}:${GENERAL_SERVICE_REGISTRY_SERVER_PORT}/eureka
 properties:
   jwt:
     issuer-uri: ${OAUTH2_RESOURCE_JWT_ISSUER_LOCATION}
