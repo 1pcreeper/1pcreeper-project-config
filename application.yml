@@ -6,8 +6,8 @@ spring:
       discovery:
         enabled: true
         service-id: ${GENERAL_CONFIG_MAPPING_SERVER_HOSTNAME}
-        username: ${GENERAL_CONFIG_MAPPING_SECURITY_USERNAME}
-        password: ${GENERAL_CONFIG_MAPPING_SECURITY_PASSWORD}
+      username: ${GENERAL_CONFIG_MAPPING_SECURITY_USERNAME}
+      password: ${GENERAL_CONFIG_MAPPING_SECURITY_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: none
