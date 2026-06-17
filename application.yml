@@ -8,6 +8,21 @@ spring:
         service-id: ${GENERAL_CONFIG_MAPPING_SERVER_HOSTNAME}
       username: ${GENERAL_CONFIG_MAPPING_SECURITY_USERNAME}
       password: ${GENERAL_CONFIG_MAPPING_SECURITY_PASSWORD}
+    stream:
+      binders:
+        kafka-broker:
+          type: kafka
+          environment:
+            spring:
+              kafka:
+                bootstrap-servers: ${GENERAL_KAFKA_BOOTSTRAP_SERVERS}
+      bindings:
+        general-kafka-polyroom-project-generate-topic-out-0:
+          destination: general-kafka-polyroom-project-generate-topic
+          binder: kafka-broker
+        general-kafka-hunyuan-obj-texture-mapping-topic-out-0:
+          destination: general-kafka-hunyuan-obj-texture-mapping-topic
+          binder: kafka-broker
   jpa:
     hibernate:
       ddl-auto: none
