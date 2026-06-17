@@ -20,9 +20,11 @@ spring:
         general-kafka-polyroom-project-generate-topic-out-0:
           destination: general-kafka-polyroom-project-generate-topic
           binder: kafka-broker
+          content-type: application/json
         general-kafka-hunyuan-obj-texture-mapping-topic-out-0:
           destination: general-kafka-hunyuan-obj-texture-mapping-topic
           binder: kafka-broker
+          content-type: application/json
   jpa:
     hibernate:
       ddl-auto: none
